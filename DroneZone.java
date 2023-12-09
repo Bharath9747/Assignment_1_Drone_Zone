@@ -23,10 +23,10 @@ public class DroneZone {
         Map<DronePoint, ArrayList<DronePoint>> res = DroneFunctions.findPaths(grid,dronePoints,target);
         for (Map.Entry<DronePoint,ArrayList<DronePoint>> e:res.entrySet())
         {
-            System.out.println(e.getKey());
+            System.out.println("Drone : "+e.getKey());
             Collections.reverse(e.getValue());
             for (DronePoint dronePoint : e.getValue())
-                System.out.print(dronePoint+" ");
+                System.out.println(dronePoint);
             System.out.println();
         }
     }
