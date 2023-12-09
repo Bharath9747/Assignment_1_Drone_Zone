@@ -14,7 +14,7 @@ class DroneFunctions {
             while(!dronePointQueue.isEmpty()){
                 DronePoint cur = dronePointQueue.poll();
                 if(cur.x==target.x && cur.y==target.y) {
-                    path.put(dronePoint, reconst(cur));
+                    path.put(dronePoint, addPath(cur));
                     break;
                 }
                 for(int[] dr:dir){
@@ -32,7 +32,7 @@ class DroneFunctions {
         return path;
     }
 
-    static ArrayList<DronePoint> reconst(DronePoint cur) {
+    static ArrayList<DronePoint> addPath(DronePoint cur) {
         ArrayList<DronePoint> paths = new ArrayList<>();
         while(cur!=null)
         {
